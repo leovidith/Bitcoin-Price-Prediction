@@ -1,8 +1,13 @@
-# Bitcoin Price Predictor README
+# Time Series Forecasting - Bitcoin price analysis
 
 ## Overview
 This repository contains a series of models designed to predict Bitcoin prices using historical time-series data. Various machine learning and deep learning approaches are implemented, including basic models like Dense Artificial Neural Networks (ANN), Convolutional Neural Networks (Conv1D), Long Short-Term Memory networks (LSTM), and more advanced methods like N-Beats and Ensemble Models.
 
+---
+## Dataset Visualisation:
+<img src="https://github.com/leovidith/Bitcoin-Price-Prediction/blob/main/images/bitcoin%202.png" alt="Model Architecture" width="600"/>
+
+---
 ## Models Overview
 
 ### Model 1: Dense ANN (Artificial Neural Network)
@@ -49,6 +54,12 @@ Below are the performance metrics (evaluated on test data) for each model:
 | **Model 6: Turkey**      | 17,149.12  | 615,804,400| 24,815.41  | 121.62     | 26.54      |
 
 ---
+
+<img src="https://github.com/leovidith/Bitcoin-Price-Prediction/blob/main/images/bitcoin.png" alt="Model Architecture" width="600"/>
+<img src="https://github.com/leovidith/Bitcoin-Price-Prediction/blob/main/images/bitcoin1.png" alt="Model Architecture" width="600"/>
+
+---
+
 
 ## How to Use
 

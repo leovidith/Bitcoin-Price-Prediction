@@ -1,48 +1,17 @@
-# Time Series Forecasting - Bitcoin price analysis
+# Time Series Forecasting - Bitcoin Price Analysis
 
 ## Overview
-This repository contains a series of models designed to predict Bitcoin prices using historical time-series data. Various machine learning and deep learning approaches are implemented, including basic models like Dense Artificial Neural Networks (ANN), Convolutional Neural Networks (Conv1D), Long Short-Term Memory networks (LSTM), and more advanced methods like N-Beats and Ensemble Models.
 
----
-## Dataset Visualisation:
-<img src="https://github.com/leovidith/Bitcoin-Price-Prediction/blob/main/images/bitcoin%202.png" alt="Model Architecture" width="600"/>
+This repository contains a series of models designed to predict **Bitcoin prices** using historical time-series data. The models implement a range of machine learning and deep learning approaches, including **Dense Artificial Neural Networks (ANN)**, **Convolutional Neural Networks (Conv1D)**, **Long Short-Term Memory (LSTM)** networks, and more advanced methods like **N-Beats** and **Ensemble Models**. 
 
----
-## Models Overview
+## Results
 
-### Model 1: Dense ANN (Artificial Neural Network)
-- **Type**: Fully connected feedforward neural network.
-- **Features**: Uses dense layers with ReLU activation to predict Bitcoin prices.
-- **Training**: Trained on windowed time-series data (7 days window).
-  
-### Model 2: Conv1D Model (1D Convolutional Neural Network)
-- **Type**: 1D Convolutional Neural Network (CNN).
-- **Features**: Utilizes convolutional layers to detect patterns in time series data.
-- **Training**: Similar to the Dense ANN but leverages the spatial features in sequences.
+### Dataset Visualization:
+<img src="https://github.com/leovidith/Bitcoin-Price-Prediction/blob/main/images/bitcoin%202.png" alt="Bitcoin Dataset Visualization" width="600"/>
 
-### Model 3: LSTM (Long Short-Term Memory)
-- **Type**: Recurrent neural network (RNN) with LSTM units.
-- **Features**: Designed to capture long-term dependencies in time-series data, ideal for sequence prediction tasks.
-- **Training**: Trained on historical Bitcoin price data with 7-day windows.
+### Performance Metrics:
 
-### Model 4: N-BEATS Algorithm
-- **Type**: Deep learning-based time-series forecasting model.
-- **Features**: A neural network-based model designed for forecasting that doesn’t rely on domain knowledge. It uses blocks of neural networks to capture both trend and seasonal patterns.
-- **Training**: Applies advanced stacking methods for accurate forecasting.
-
-### Model 5: Ensemble Model
-- **Type**: Combination of multiple models.
-- **Features**: Uses the output of multiple models (e.g., Dense ANN, LSTM, Conv1D) to predict Bitcoin prices by averaging their predictions.
-- **Training**: Multiple models are trained iteratively, and the final predictions are an ensemble of these models.
-
-### Model 6: Turkey Model
-- **Type**: A model designed to predict Bitcoin prices while considering an extreme event.
-- **Features**: Applies a perturbation to the last data point to simulate catastrophic events and predict how Bitcoin's price reacts.
-- **Training**: Trained on time-series data with adjustments to account for outlier or extreme events.
-
-## Performance Metrics
-
-Below are the performance metrics (evaluated on test data) for each model:
+Below are the performance metrics for each model:
 
 | Model             | MAE        | MSE        | RMSE       | MAPE (%)   | MASE       |
 |-------------------|------------|------------|------------|------------|------------|
@@ -53,35 +22,35 @@ Below are the performance metrics (evaluated on test data) for each model:
 | **Model 5: Ensemble**    | 577.34     | 1,166,218  | 1,079.92   | 2.60       | 1.01       |
 | **Model 6: Turkey**      | 17,149.12  | 615,804,400| 24,815.41  | 121.62     | 26.54      |
 
----
+### Visualizations:
+<img src="https://github.com/leovidith/Bitcoin-Price-Prediction/blob/main/images/bitcoin.png" alt="Bitcoin Price Prediction" width="600"/>
+<img src="https://github.com/leovidith/Bitcoin-Price-Prediction/blob/main/images/bitcoin1.png" alt="Bitcoin Price Prediction" width="600"/>
 
-<img src="https://github.com/leovidith/Bitcoin-Price-Prediction/blob/main/images/bitcoin.png" alt="Model Architecture" width="600"/>
-<img src="https://github.com/leovidith/Bitcoin-Price-Prediction/blob/main/images/bitcoin1.png" alt="Model Architecture" width="600"/>
+## Features
 
----
+- **Model 1: Dense ANN (Artificial Neural Network)**: Fully connected feedforward neural network for predicting Bitcoin prices.
+- **Model 2: Conv1D (1D Convolutional Neural Network)**: CNN-based model for detecting patterns in time-series data.
+- **Model 3: LSTM (Long Short-Term Memory)**: A recurrent neural network designed for sequence prediction tasks, capturing long-term dependencies in data.
+- **Model 4: N-Beats**: Deep learning-based time-series forecasting model that uses blocks of neural networks to capture trends and seasonal patterns.
+- **Model 5: Ensemble**: Combines the predictions of multiple models (ANN, LSTM, Conv1D) to provide more accurate forecasts.
+- **Model 6: Turkey Model**: Predicts Bitcoin prices considering extreme events, simulating catastrophic events in the market.
 
+## Sprint Features
 
-## How to Use
+### Sprint 1: Data Preprocessing
+- **Deliverable**: Cleaned and prepared Bitcoin time-series data, ready for model training.
 
-1. **Installation**
-   - Clone this repository to your local machine.
-   - Install the required dependencies using the following command:
-     ```bash
-     pip install -r requirements.txt
-     ```
+### Sprint 2: Model Architecture and Training
+- **Deliverable**: Trained models for Dense ANN, Conv1D, LSTM, N-Beats, Ensemble, and Turkey models.
 
-2. **Running the Models**
-   - Execute the script to train and evaluate the models:
-     ```bash
-     python bitcoin_price_predictor.py
-     ```
+### Sprint 3: Model Evaluation
+- **Deliverable**: Evaluation of model performance based on MAE, MSE, RMSE, MAPE, and MASE metrics.
 
-3. **Model Results**
-   - After running the script, you will see the evaluation results printed on the console.
-   - Visualizations of the predictions and actual prices will also be plotted.
-
----
+### Sprint 4: Results Visualization
+- **Deliverable**: Visualizations showing the comparison of predicted vs. actual Bitcoin prices.
 
 ## Conclusion
 
-Each model has been evaluated on its ability to predict Bitcoin's price based on historical data. The ensemble model provides a robust approach by combining the strengths of individual models. However, the Turkey model demonstrates how extreme events can significantly disrupt predictions, as evidenced by its very high error metrics.
+The **Ensemble Model** provides the most robust approach by combining the strengths of individual models. However, the **Turkey Model** highlights how extreme events can disrupt predictions, with a very high error rate observed during its evaluation. This suggests the importance of accounting for such anomalies in time-series forecasting tasks. 
+
+Let me know if you need any further modifications!

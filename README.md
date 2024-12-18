@@ -52,5 +52,3 @@ Below are the performance metrics for each model:
 ## Conclusion
 
 The **Ensemble Model** provides the most robust approach by combining the strengths of individual models. However, the **Turkey Model** highlights how extreme events can disrupt predictions, with a very high error rate observed during its evaluation. This suggests the importance of accounting for such anomalies in time-series forecasting tasks. 
-
-Let me know if you need any further modifications!
